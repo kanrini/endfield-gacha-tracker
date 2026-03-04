@@ -222,11 +222,11 @@ def analyze_gacha_luck(csv_filename="endfield_gacha_history_all.csv"):
         char_percentile = (1 - calculate_binom_cdf(max(0, total_char_6 - 1), total_char, CHAR_RATE)) * 100
 
         print("\n" + "=" * 45)
-        print("👤 캐릭터 헤드헌팅 분석 결과")
+        print("👤 캐릭터 헤드헌팅 운(Luck) 분석 결과")
         print("=" * 45)
         print(f"▶ 총 뽑기 횟수 : {total_char}회")
-        print(f"▶ 6성 획득 수  : {total_char_6}명 (기대치: {expected_char_6:.1f}명)")
-        print(f"▶ 평균 6성 천장 : {avg_char_pity:.1f}회")
+        print(f"▶ 6성 획득 수  : {total_char_6}명 (공식 확률상 기대치: {expected_char_6:.1f}명)")
+        print(f"▶ 평균 6성 천장 : {avg_char_pity:.1f}회 (공식 평균치: 약 62.5회)")
         print(f"▶ 현재 남은 스택 : {current_char_pity} / 80")
         print(f"▶ 상위 % 운    : 상위 {char_percentile:.1f}%")
 
@@ -251,11 +251,11 @@ def analyze_gacha_luck(csv_filename="endfield_gacha_history_all.csv"):
         weap_percentile = (1 - calculate_binom_cdf(max(0, total_weap_6 - 1), total_weap, WEAP_RATE)) * 100
 
         print("\n" + "=" * 45)
-        print("⚔️ 무기 헤드헌팅 분석 결과")
+        print("⚔️ 무기 헤드헌팅 운(Luck) 분석 결과")
         print("=" * 45)
         print(f"▶ 총 뽑기 횟수 : {total_weap}회")
-        print(f"▶ 6성 획득 수  : {total_weap_6}개 (기대치: {expected_weap_6:.1f}개)")
-        print(f"▶ 평균 6성 천장 : {avg_weap_pity:.1f}회")
+        print(f"▶ 6성 획득 수  : {total_weap_6}개 (공식 확률상 기대치: {expected_weap_6:.1f}개)")
+        print(f"▶ 평균 6성 천장 : {avg_weap_pity:.1f}회 (공식 평균치: 약 20.0회)")
         print(f"▶ 현재 남은 스택 : {current_weap_pity} / 40")
         print(f"▶ 상위 % 운    : 상위 {weap_percentile:.1f}%")
             
